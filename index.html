@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="res/css/style.css">
+    <script src="jquery.js"></script>
     <title>postIt! Just Post It</title>
   </head>
   <body>
@@ -17,8 +18,17 @@
         </div>
         <div class="avatar-container">
           <img src="res/images/avatar.png" class="avatar" alt="Me">
+          <div class="dropdown">
+            <a href="browse.html">Browse</a>
+            <a href="login.html">Log out</a>
+          </div>
         </div>
       </nav>
+      <script>
+        $("img.avatar").click(function () {
+          $("div.dropdown").css("display", "block");
+      	});
+      </script>
     </header>
     <section class="main-container">
       <div class="post">
