@@ -115,7 +115,7 @@ nav div.avatar-container {
     display: inline-block;
 }
 
-div.dropdown {
+.dropdown {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
