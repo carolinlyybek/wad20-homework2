@@ -1,6 +1,5 @@
-$(document).ready(function() {
-    $(".avatar").click(function(e) {
-        e.preventDefault();
-        $(".dropdown").toggle(). css("display", "block");
+$ (document).ready(function() {    
+    $("document").on("click", ".avatar", function() {
+        $(".dropdown").toggleClass("visible");
     });
 });
