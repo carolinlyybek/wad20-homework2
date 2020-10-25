@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="res/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="res/js/script.js"></script>
+    <script src="res/js/User.js"></script>
+    <title>postIt! Browse Users</title>
 </head>
 <body>
+<header>
+    <nav>
+        <div class="logo-container">
+            <img src="res/images/logo.png" alt="postIt">
+        </div>
+        <div class="search-container">
+            <input type="text" name="search"><button type="button">Search</button>
+        </div>
+        <div class="avatar-container">
+            <img src="res/images/avatar.png" class="avatar" id="avatar" alt="Me">
+            <div class="dropdown">
+                <p id="name"></p>
+                <p id="email"></p>
+                <a href="index.html">Main page</a>
+                <a href="login.html">Log out</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
 
+<section class="main-container">
+    <div class="gridOfProfiles">
+    <table style="width: 50%" border = 1 >
+        <tr>
+            <td> Testing 1</td>
+           <td> Testing 2</td>
+        </tr>
+        <tr>
+            <td > Testing 3 </td>
+            <td > Testing 4 </td>
+        </tr>
+    </table>
+    </div>
+</section>
 </body>
-</html>
+

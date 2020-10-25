@@ -1,3 +1,5 @@
+let profiles = [];
+
 $(function(){
 
     $(".avatar-container").click(function (){
@@ -42,6 +44,20 @@ $(function(){
             alert('Error loading post info')
         });
 
+
+    loadProfilesInfo()
+        .then(function (response){
+            for (let profile of response){
+                profiles.push (new Profile
+                (profile.firstname, profile.lastname, profile.avatar));
+            }
+            displayProfilesInfo()
+        })
+        .catch(function(){
+            alert('Error loading profiles info')
+        });
+
+
     function displayUserInfo(user) {
         $('#name').text(user.firstname + " " + user.lastname);
         $('#email').text(user.email);
@@ -57,6 +73,12 @@ $(function(){
         $('.like-button').text(post.likes);
     }
 
+    function displayProfilesInfo(profile) {
+        $('#nameProfile').text(user.firstname + " " + user.lastname);
+        $('#avatarProfile').attr('src', user.avatar);
+    }
+
+
     function loadUserInfo() {
         return $.get (
             {
@@ -68,8 +90,6 @@ $(function(){
                     alert('error')
                 }
             }
-            /*displayUserInfo(user)*/
-            /*see vb ei pea siin olema aga proovisin */
         );
     }
 
@@ -87,4 +107,21 @@ $(function(){
         );
     }
 
+    function loadProfilesInfo() {
+        return $.get (
+            {
+                url: 'https://wad20postit.docs.apiary.io/#reference/0/profiles-collection',
+                success: function (response) {
+                    return response
+                },
+                error: function () {
+                    alert('error loading profiles info')
+                }
+            }
+        );
+    }
+
 });
+
+
+
