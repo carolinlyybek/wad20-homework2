@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="res/css/style.css">
-    <script type="text/javascript" src="res/js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="res/js/script.js"></script>
     <title>postIt! Just Post It</title>
   </head>
   <body>
@@ -19,9 +19,11 @@
         </div>
         <div class="avatar-container">
           <img src="res/images/avatar.png" class="avatar" alt="Me">
-          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
 
           <div class="dropdown" id="dropdown">
+            <p id="firstname"> firstname </p>
+            <p id="lastname">lastname</p>
+            <p id="email">email</p>
             <a href="browse.html">Browse</a>
             <a href="login.html">Log out</a>
           </div>
