@@ -4,6 +4,10 @@ $(function(){
         $(".dropdown").toggle();
     });
 
+    $(".like-button").click(function() {
+        $(this).toggleClass("liked");
+    });
+
     loadUserInfo()
         .then(function(response) {
             let user = new User(

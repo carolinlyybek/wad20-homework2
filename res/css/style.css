@@ -122,6 +122,7 @@ nav div.avatar-container {
 .dropdown {
     display: none;
     position: relative;
+    background-color: #e0e0e0;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
