@@ -27,18 +27,15 @@ $(function(){
 
     loadPosts()
         .then(function(response) {
-            let post = new Post(
-                response.id,
-                response.author.firstname,
-                response.author.lastname,
-                response.author.avatar,
-                response.createtime,
-                response.text,
-                response.media.type,
-                response.media.url,
-                response.likes
-            );
-            displayPosts(post)
+            for (i in response) {
+                let post = new Post(
+                    i.author,
+                    i.createTime,
+                    i.media,
+                    i.likes
+                );
+                displayPosts(post)
+            }
         })
         .catch(function () {
             alert('Error loading post info')
@@ -65,11 +62,11 @@ $(function(){
     }
 
     function displayPosts(post) {
-        $('#post_author_photo').attr('src',post.avatar);
-        $('#name').text(post.name);
-        $('#createTime').text(post.createtime);
-        //$('#post_photo').attr('src',post.)
-        $('.post-title').text(post.text);
+        $('span img').attr('src',post.avatar);
+        $('span small').text(post.name);
+        $('small').text(post.createtime);
+        $('.post-image img').attr(post.type,post.url);
+        $('.post-title h3').text(post.text);
         $('.like-button').text(post.likes);
     }
 
