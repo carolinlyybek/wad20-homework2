@@ -1,21 +1,12 @@
 class Post {
-    constructor(id, firstname, lastname, avatar, createtime, text, type, url, likes) {
-        this.id = id;
-        this.name = firstname + " " + lastname;
-        this.avatar = avatar;
+    constructor(author, createtime, media, likes) {
+        this.name = author.firstname + " " + author.lastname;
+        this.avatar = author.avatar;
         this.createtime = createtime;
         this.text = text;
-        if (type == 'image') {
-            this.type=img;
-            this.url = url;
-        }
-        else if (type == 'video') {
-            this.type = video;
-            this.url = url;
-        }
-        else {
-            this.type = null;
-            this.url = null;
+        if (media != null) {
+            this.type = media.type;
+            this.url = media.url;
         }
         this.likes = likes;
     }
